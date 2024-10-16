@@ -1,6 +1,7 @@
 package com.example.weatherapp.ui.screen.components
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -9,8 +10,10 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -19,15 +22,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.weatherapp.R
+import com.example.weatherapp.ui.theme.ColorGradient1
+import com.example.weatherapp.ui.theme.ColorGradient2
+import com.example.weatherapp.ui.theme.ColorGradient3
 import com.example.weatherapp.ui.theme.ColorImageShadow
 import com.example.weatherapp.ui.theme.ColorSurface
 import com.example.weatherapp.ui.theme.ColorTextPrimary
+import com.example.weatherapp.ui.theme.ColorTextPrimaryVariant
+import com.example.weatherapp.ui.theme.ColorTextSecondaryVariant
 
 @Composable
 fun ActionBar(modifier: Modifier = Modifier) {
@@ -36,7 +45,7 @@ fun ActionBar(modifier: Modifier = Modifier) {
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         ControlButton()
-        LocationInfo()
+        LocationInfo(modifier = Modifier.padding(top = 10.dp))
         ProfileButton()
     }
 }
@@ -114,5 +123,28 @@ private fun LocationInfo(modifier: Modifier = Modifier, location: String = "Braz
                 fontWeight = FontWeight.Bold
             )
         }
+        ProgressBar()
+    }
+}
+
+@Composable
+private fun ProgressBar(modifier: Modifier = Modifier){
+    Box(
+        modifier = modifier
+            .background(
+                brush = Brush.linearGradient(
+                    0f to ColorGradient1,
+                    0.25f to ColorGradient2,
+                    1f to ColorGradient3
+                ),
+                shape = RoundedCornerShape(8.dp)
+            )
+            .padding(vertical = 2.dp, horizontal = 10.dp)
+    ){
+        Text(
+            text = "Updating •",
+            style = MaterialTheme.typography.labelSmall,
+            color = ColorTextSecondaryVariant,
+        )
     }
 }
