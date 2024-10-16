@@ -20,7 +20,6 @@ compose-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-pr
 compose-constraint-layout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "compose-constrain-layout" }
 compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
 
-
 [bundles]
 androidX = ["androidx-core", "androidx-lifecycle"]
 ui = ["compose-ui", "compose-graphics", "compose-tooling-preview", "compose-activity", "androidx-material3", "compose-constraint-layout"]
@@ -28,4 +27,4 @@ ui = ["compose-ui", "compose-graphics", "compose-tooling-preview", "compose-acti
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
