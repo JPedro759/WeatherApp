@@ -70,7 +70,7 @@ private fun ControlButton(modifier: Modifier = Modifier) {
         ){
             Image(
                 painter = painterResource(R.drawable.ic_control),
-                contentDescription = null,
+                contentDescription = "Control Button",
                 modifier = Modifier.size(20.dp)
             )
         }

@@ -166,6 +166,12 @@ private fun ForecastValue(
 private fun WindForecastImage(modifier: Modifier = Modifier){
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically){
         Icon(
+            painter = painterResource(R.drawable.ic_frosty),
+            contentDescription = null,
+            modifier = Modifier.size(60.dp),
+            tint = ColorWindForecast
+        )
+        Icon(
             painter = painterResource(R.drawable.ic_wind),
             contentDescription = null,
             modifier = Modifier.size(60.dp),

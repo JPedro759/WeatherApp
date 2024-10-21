@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.weatherapp.ui.screen.components.ActionBar
+import com.example.weatherapp.ui.screen.components.AirQuality
 import com.example.weatherapp.ui.screen.components.DailyForecast
 import com.example.weatherapp.ui.theme.ColorBackground
 
@@ -30,6 +31,8 @@ fun WeatherScreen(){
             ActionBar()
             Spacer(modifier = Modifier.height(12.dp))
             DailyForecast()
+            Spacer(modifier = Modifier.height(16.dp))
+            AirQuality()
         }
     }
 }
