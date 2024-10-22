@@ -2,7 +2,8 @@
 
 # WeatherApp
 
-<strong>WeatherApp</strong> é um aplicativo que oferece previsões meteorológicas detalhadas e informações sobre as condições climáticas em tempo real. Ele possui uma interface intuitiva e moderna, onde os usuários podem verificar a previsão do tempo para sua localização atual ou buscar por outras cidades ao redor do mundo.
+<strong>WeatherApp</strong> é um aplicativo que oferece previsões meteorológicas detalhadas e informações sobre as condições climáticas. O foco do projeto foi o design da interface, proporcionando uma navegação agradável e funcionalidade clara.
+<strong>Tecnologias usadas</strong>: Kotlin, Jetpack Compose e Android Studio.
 
 <ul>
   <li><strong>Tela principal</strong>: Mostra a temperatura atual e a descrição das condições climáticas (ensolarado, nublado, chuvoso, etc.)</li>
